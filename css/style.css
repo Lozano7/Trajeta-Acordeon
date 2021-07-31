@@ -1,0 +1,110 @@
+:root {
+  --violeta: hsl(273, 75%, 66%);
+  --grayish-white: hsl(240, 5%, 91%);
+  --azul-oscuro: hsl(238, 29%, 16%);
+  --divisor: hsl(240, 5%, 91%);
+  --divisor-cajas: hsl(240, 6%, 80%);
+  --respuestas: hsl(240, 6%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
+body {
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--violeta);
+  padding: 0 25px;
+  padding-top: 50px;
+}
+.tarjeta {
+  max-height: 550px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 31px;
+  background-color: var(--grayish-white);
+  margin: 60px 0;
+}
+.item {
+  padding: 0 25px;
+}
+.contenedor-imagenes {
+  height: 196px;
+  position: relative;
+}
+.contenedor-Dudas {
+  height: 100%;
+}
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.imagen {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 25px;
+  bottom: 55px;
+  margin: auto;
+}
+.sombra {
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  margin: auto;
+}
+.titulo {
+  margin-bottom: 25px;
+}
+.titulo h1 {
+  font-size: 2.7em;
+  text-align: center;
+}
+.texto {
+  border-bottom: 1px solid var(--divisor-cajas);
+  margin-bottom: 25px;
+}
+.pregunta,
+.respuesta {
+  margin-bottom: 15px;
+}
+.pregunta {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.pregunta p {
+  font-size: 13px;
+}
+.pregunta img {
+  height: 8px;
+  width: 10px;
+}
+.rest {
+  color: var(--respuestas);
+  line-height: 20px;
+  display: none;
+}
+.seleccionar {
+  font-weight: 700;
+}
+.visualizar {
+  display: block;
+}
+.girar {
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
