@@ -5,6 +5,7 @@
   --divisor: hsl(240, 5%, 91%);
   --divisor-cajas: hsl(240, 6%, 80%);
   --respuestas: hsl(240, 6%, 50%);
+  --sombra: hsl(240, 73%, 65%);
 }
 
 * {
@@ -29,16 +30,16 @@ body {
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
-  height: 100%;
   border-radius: 31px;
   background-color: var(--grayish-white);
   margin: 60px 0;
+  box-shadow: 0px 5px 17px 11px hsl(240, 73%, 75%);
 }
 .item {
   padding: 0 25px;
 }
 .contenedor-imagenes {
-  height: 196px;
+  height: 148px;
   position: relative;
 }
 .contenedor-Dudas {
@@ -52,23 +53,32 @@ button {
 .imagen {
   z-index: 2;
   position: absolute;
+  bottom: 55px;
   left: 0;
   right: 25px;
-  bottom: 55px;
-  margin: auto;
+  margin: 0 auto;
 }
 .sombra {
   z-index: 1;
   position: absolute;
-  top: 15px;
   left: 0;
   right: 0;
-  bottom: 50px;
+  bottom: 45px;
   margin: auto;
 }
-.titulo {
-  margin-bottom: 25px;
+.caja-imagen {
+  display: none;
 }
+.imagen2 {
+  display: none;
+}
+.sombra2 {
+  display: none;
+}
+.preguntas {
+  padding-top: 15px;
+}
+
 .titulo h1 {
   font-size: 2.7em;
   text-align: center;
@@ -107,4 +117,48 @@ button {
 .girar {
   transform: rotate(180deg);
   transition: transform 0.5s;
+}
+@media screen and (min-width: 800px) {
+  body {
+    display: flex;
+    flex-grow: 1;
+    padding: 0;
+    justify-content: center;
+  }
+  .tarjeta {
+    margin: 0;
+    height: 800px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    max-width: 75vw;
+  }
+  .contenedor-imagenes {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    min-height: 472px;
+    width: 50%;
+  }
+  .item {
+    padding: 50px 25px;
+  }
+  .titulo h1 {
+    text-align: left;
+  }
+  .contenedor-Dudas {
+    height: 100%;
+    width: 50%;
+  }
+  .imagen {
+    display: none;
+  }
+  .sombra {
+    display: none;
+  }
+  .caja-imagen {
+    display: block;
+    margin: auto;
+  }
 }
