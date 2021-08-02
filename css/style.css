@@ -171,7 +171,7 @@ button {
     display: none;
   }
   .caja-imagen {
-    z-index: 2;
+    z-index: 3;
     width: 40%;
     display: block;
     position: absolute;
@@ -188,6 +188,7 @@ button {
     right: 22%;
     bottom: 12%;
     margin: auto;
+    z-index: 2;
   }
   .sombra2 {
     width: 100%;
@@ -198,5 +199,6 @@ button {
     left: -15%;
     bottom: 0;
     margin: auto;
+    z-index: 1;
   }
 }
